@@ -1,0 +1,33 @@
+--Creating database:
+	sqlite3 BPT.db
+
+CREATE TABLE tasks (
+    row_ID INT,
+    Work_Order TEXT,
+    QTY INT,
+    Pickup_Location TEXT,
+    Delivery_Location TEXT,
+    Arrived_Time TEXT,
+    Loaded_Time TEXT,
+    Delivered_Time TEXT,
+    Unloaded_Time TEXT
+);
+
+CREATE TABLE states (
+    State_Of_System TEXT,
+    BLDG_1 TEXT,
+    BLDG_2 TEXT,
+    BLDG_3 TEXT,
+    Charging_Station TEXT,
+    Current_Row TEXT,
+    Row_ID_WO_Input TEXT
+);
+
+INSERT INTO tasks (
+    row_ID, Work_Order, QTY, Pickup_Location, Delivery_Location, Arrived_Time, Loaded_Time, Delivered_Time, Unloaded_Time)
+    VALUES (0,"WO192837",1,1,3,NULL,NULL,NULL,NULL),
+            (1,"WO192847",8,2,1,NULL,NULL,NULL,NULL),
+            (2,"WO104827",9,1,3,NULL,NULL,NULL,NULL);
+
+INSERT INTO states (State_Of_System, BLDG_1, BLDG_2, BLDG_3, Charging_Station, Current_Row, Row_ID_WO_Input)
+        VALUES (0,0,0,0,0,0,0);
