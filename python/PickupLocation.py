@@ -138,7 +138,6 @@ class Ui_PLWindow(object):
         if confPBuilding == False:
             self.PLLabel.setText("Current Pickup Location: " + pickupBuilding)
             self.PLLabel.adjustSize()
-            #self.PLLabel.setAlignment(Qt.AlignVCenter)
 
     def insertPL(self,l):
         curRow = self.whichRow()
